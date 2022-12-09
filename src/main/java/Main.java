@@ -18,8 +18,7 @@ public class Main {
             System.out.println("На сколько человек делим счет?");
 
             try {
-                String s = scanner.next();
-                peoples = Integer.parseInt(s);
+                peoples = scanner.nextInt();
 
                 if (peoples == 1) {
                     showErrorMessage("Количество человек должно быть более 1.");
@@ -86,17 +85,11 @@ public class Main {
 
         System.out.println(calculator.getPriceForOnePeople());
 
-        onDestroy();
     }
 
 
     static void showErrorMessage(String errorString) {
         System.out.println("Ошибка! " + errorString);
-    }
-
-    static void onDestroy() {
-        scanner = null;
-        calculator = null;
     }
 
 }
